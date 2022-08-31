@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	export let song: any;
+
+	const trackId = song.trackId;
 	const fullArtistName = song.artistName;
 	const fullTrackName = song.trackName;
-	const trunkArtistName = fullArtistName.length > 25 ? fullArtistName.substring(0, 25).concat('...') : fullArtistName;
-	const trunkTrackName = fullTrackName.length > 25 ? fullTrackName.substring(0, 25).concat('...') : fullTrackName;
+	const trunkArtistName =
+		fullArtistName.length > 25 ? fullArtistName.substring(0, 25).concat('...') : fullArtistName;
+	const trunkTrackName =
+		fullTrackName.length > 25 ? fullTrackName.substring(0, 25).concat('...') : fullTrackName;
 </script>
 
 <div class="wrapper">
@@ -11,7 +16,7 @@
 	<div class="inner">
 		<b title={fullArtistName}>{trunkArtistName}</b>
 		<p title={fullTrackName}>{trunkTrackName}</p>
-		<!-- <a href="">View more</a> -->
+		<a href={`${$page.params.searchTerm}/${trackId}`}>View more</a>
 	</div>
 </div>
 
