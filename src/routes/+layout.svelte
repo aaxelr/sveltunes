@@ -5,6 +5,9 @@
 
 <!--TODO: FOOTER -->
 <style>
+	:global(*) {
+		box-sizing: border-box;
+	}
 	:global(p, b, h1, h2, label, a) {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
 			'Open Sans', 'Helvetica Neue', sans-serif;
@@ -13,6 +16,6 @@
 
 	main {
 		max-width: 968px;
-		margin-inline: auto;
+		margin: 1rem auto;
 	}
 </style>
