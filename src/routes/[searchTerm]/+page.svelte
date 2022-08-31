@@ -20,5 +20,6 @@
 
 <h2>Results</h2>
 {#if searchResults}
+	<p>Found {searchResults} song(s) for "{searchTerm}"</p>
 	<SongCardContainer {songResults} />
 {/if}
